@@ -11,7 +11,7 @@ use eluhr\tj\ArrayTableSchemaConverter;
 $tableSchema = Yii::$app->getDb()->getTableSchema('{{%user}}');
 
 $jsonSchemaAsObject = ObjectTableSchemaConverter::convert($tableSchema);
-$jsonSchemaAsArray = ObjectTableSchemaConverter::convert($tableSchema);
+$jsonSchemaAsArray = ArrayTableSchemaConverter::convert($tableSchema);
 
 return $jsonSchema;
 ```
