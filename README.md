@@ -5,10 +5,13 @@ So here is the plan: I want to write a helper or something like that to convert 
 ## How to use
 
 ```php
-use eluhr\tj\TableSchemaConverter;
+use eluhr\tj\ObjectTableSchemaConverter;
+use eluhr\tj\ArrayTableSchemaConverter;
 
 $tableSchema = Yii::$app->getDb()->getTableSchema('{{%user}}');
-$jsonSchema = TableSchemaConverter::convert($tableSchema);
+
+$jsonSchemaAsObject = ObjectTableSchemaConverter::convert($tableSchema);
+$jsonSchemaAsArray = ObjectTableSchemaConverter::convert($tableSchema);
 
 return $jsonSchema;
 ```

@@ -2,37 +2,18 @@
 
 namespace eluhr\tj;
 
+use eluhr\tj\interfaces\TableSchemaConverterInterface;
 use yii\db\ColumnSchema;
 use yii\db\TableSchema;
 
 /**
- * Class TableSchemaConverter
+ * Class BaseTableSchemaConverter
  *
  * @package eluhr\tj
  * @author Elias Luhr
  */
-class TableSchemaConverter
+abstract class BaseTableSchemaConverter implements TableSchemaConverterInterface
 {
-    /**
-     * Convert a given TableSchema to an array representation of a json schema. Either as array or as object
-     *
-     * @param TableSchema $tableSchema
-     * @param bool $asArray
-     *
-     * @return array
-     */
-    public static function convert(TableSchema $tableSchema, bool $asArray = false): array
-    {
-        $jsonSchema = self::generateJsonSchema($tableSchema);
-
-        if ($asArray) {
-            return [
-                'type' => 'array',
-                'items' => $jsonSchema
-            ];
-        }
-        return $jsonSchema;
-    }
 
     /**
      * Generate the json schema array representation for the table schema
