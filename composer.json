@@ -1,0 +1,14 @@
+{
+  "name": "eluhr/tj",
+  "description": "Convert yii\\db\\TableSchema to a JSON array representation",
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=5.4.0",
+    "yiisoft/yii2": "^2.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "eluhr\\tj": "src"
+    }
+  }
+}
