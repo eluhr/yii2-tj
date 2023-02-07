@@ -1,6 +1,6 @@
 # Table to JSON Schema
 
-So here is the plan: I want to write a helper or something like that to convert a yii\db\TableSchema to a valid JSON Schema php array representation.
+A helper to convert a yii\db\TableSchema to a valid JSON Schema php array representation.
 
 ## How to use
 
